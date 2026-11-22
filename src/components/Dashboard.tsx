@@ -655,21 +655,33 @@ export default function Dashboard() {
                 {/* Quick Actions Column */}
                 <div className="space-y-4 lg:col-span-2">
                   <div className="rounded-xl border border-zinc-800/90 bg-zinc-900/40 p-5">
-                    <h2 className="text-sm font-semibold text-zinc-100">15-Min Coffee Chat</h2>
+                    <h2 className="text-sm font-semibold text-zinc-100">Coffee &amp; Deep-Dive Chats</h2>
                     <p className="mt-1.5 text-xs leading-relaxed text-zinc-400">
                       Grab a quick slot during NeurIPS or online to talk AI systems, startups, or
                       security.
                     </p>
-                    <a
-                      href={PROFILE.calComUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-md bg-zinc-100 px-3.5 py-2 text-xs font-semibold text-zinc-950 transition-colors hover:bg-zinc-200"
-                    >
-                      <Calendar className="h-3.5 w-3.5" />
-                      Open Cal.com
-                      <ArrowUpRight className="h-3.5 w-3.5" />
-                    </a>
+                    <div className="mt-4 flex flex-col gap-2">
+                      <a
+                        href={PROFILE.calComUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-zinc-100 px-3.5 py-2 text-xs font-semibold text-zinc-950 transition-colors hover:bg-zinc-200"
+                      >
+                        <Calendar className="h-3.5 w-3.5" />
+                        15-min Coffee Chat
+                        <ArrowUpRight className="h-3.5 w-3.5" />
+                      </a>
+                      <a
+                        href={PROFILE.calCom30Url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex w-full items-center justify-center gap-2 rounded-md border border-zinc-700 bg-zinc-950 px-3.5 py-2 text-xs font-medium text-zinc-200 transition-colors hover:border-zinc-600 hover:bg-zinc-900"
+                      >
+                        <Calendar className="h-3.5 w-3.5" />
+                        30-min Deep Dive
+                        <ArrowUpRight className="h-3.5 w-3.5" />
+                      </a>
+                    </div>
                   </div>
 
                   <div className="rounded-xl border border-zinc-800/90 bg-zinc-900/40 p-5">

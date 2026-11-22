@@ -40,8 +40,9 @@ export const PROFILE = {
   },
   // Live n8n webhook created via MCP (Handle portfolio contact submission)
   contactWebhookUrl: "https://n8n.bizad.in/webhook/portfolio-contact",
-  // Replace with your self-hosted or cloud Cal.com 15-min coffee link
-  calComUrl: "https://cal.com/arnavgupta/15min",
+  // Self-hosted Cal.com links
+  calComUrl: "https://cal.qubit.bizad.in/arnav/15min",
+  calCom30Url: "https://cal.qubit.bizad.in/arnav/30min",
   // Optional self-hosted Umami analytics (leave empty until deployed)
   umami: {
     scriptUrl: "",
