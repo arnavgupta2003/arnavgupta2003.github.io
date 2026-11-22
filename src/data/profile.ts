@@ -27,10 +27,10 @@ export interface SelfHostedItem {
 export const PROFILE = {
   name: "Arnav Gupta",
   handle: "arnavgupta",
-  headline: "Software Engineer @ Google (Core Search & AIM) · Fractional CTO · Systems Security",
+  headline: "Software Engineer @ Google Search (Agentic Workflows) · Ex-CTO · Systems Security",
   location: "Bangalore, India",
   statusBadge: "At NeurIPS — Open for 15-min coffee chats",
-  bio: "Software Engineer at Google (Core Search & AIM Engineering) and Fractional/Silent CTO focused on shipping production-grade AI systems, core search ranking at scale, high-reliability infrastructure recovery (4-9s SLA), and applied systems security.",
+  bio: "Software Engineer at Google working on Agentic Workflows for Google Search (Core Search & AIM Engineering), and former Fractional/Silent CTO focused on production AI systems, high-reliability infrastructure recovery (4-9s SLA), applied systems security, and self-hosted agentic infrastructure.",
   email: "arnav.gupta.2003@gmail.com",
   // Replace these with your exact URLs before deploying
   socials: {
@@ -50,8 +50,8 @@ export const PROFILE = {
   kpis: [
     {
       label: "Current Role",
-      value: "Google SWE",
-      detail: "Core Search & AIM Engineering",
+      value: "Google Search",
+      detail: "Agentic Workflows & AIM Engineering",
     },
     {
       label: "Infra Reliability",
@@ -72,25 +72,25 @@ export const PROFILE = {
   experience: [
     {
       company: "Google",
-      role: "Software Engineer (SWE) – Core Search & AIM Engineering",
+      role: "Software Engineer (SWE) – Agentic Workflows for Google Search (Core Search & AIM)",
       period: "2025 – Present",
       location: "Bangalore, India",
       badge: "Full-Time",
       highlights: [
-        "Architecting and scaling LLM-powered features and ranking systems inside Google Search pipelines to drive algorithmic relevance at global scale.",
+        "Building and scaling agentic workflows and LLM-powered ranking features inside Google Search pipelines to drive algorithmic relevance at global scale.",
         "Leading end-to-end full-stack feature development, technical optimizations, and scalable AI infrastructure.",
         "SWE Intern (May 2024 – Aug 2024): Improved local categorical rankings for mixed-language queries by closing classifier score gaps and integrating an NLP query classifier into the local web triggering pipeline.",
       ],
-      tags: ["LLMs", "Search Ranking", "NLP", "Distributed Systems", "AI Infra"],
+      tags: ["Agentic Workflows", "Google Search", "LLMs", "Ranking Systems", "AI Infra"],
     },
     {
       company: "Bizad",
       role: "Silent Chief Technology Officer (CTO)",
-      period: "2023 – Present",
+      period: "2023 – 2025",
       location: "Remote",
       badge: "Leadership",
       highlights: [
-        "Formulating stealth-mode product roadmaps, foundational architecture, and scalable infrastructure for rapid deployment and agile market delivery.",
+        "Formulated stealth-mode product roadmaps, foundational architecture, and scalable infrastructure for rapid deployment and agile market delivery prior to joining Google.",
       ],
       tags: ["System Architecture", "Product Strategy", "Cloud Infra"],
     },
@@ -155,39 +155,45 @@ export const PROFILE = {
   },
   selfHosted: [
     {
-      name: "n8n",
-      category: "Automation",
-      description: "Powers this site's contact webhook, Slack triage, and personal workflow automation.",
+      name: "Self-Maintaining LLM Wiki",
+      category: "Obsidian · MCP · Git · Kaneo",
+      description:
+        "Two-speed automated knowledge base: daily inbox capture + weekly Git worktree consolidation PRs with an event-driven GitHub → n8n → Kaneo human-in-the-loop review loop.",
       status: "Active",
     },
     {
-      name: "Posta",
-      category: "Email Infra",
-      description: "Self-hosted transactional email delivery API backed by custom domain SMTP.",
+      name: "AGY ↔ Kaneo Agent Runner",
+      category: "Docker · Dagu · n8n · Kaneo",
+      description:
+        "Remote phone & Slack → n8n → Kaneo task queue executed by an always-on Dockerized Dagu + autonomous coding CLI runner over Tailscale.",
       status: "Active",
     },
     {
-      name: "Cal.com",
-      category: "Scheduling",
-      description: "15-minute coffee & NeurIPS meeting scheduler.",
-      status: "Planned",
-    },
-    {
-      name: "Umami",
-      category: "Analytics",
-      description: "Cookie-free, privacy-first page & referrer analytics for this dashboard.",
+      name: "xyOps + Paperclip GPU Queue",
+      category: "xyOps · Ollama · Local GPU",
+      description:
+        "Concurrency-controlled local GPU job scheduler & AI control plane powering shared Ollama inference for CI diff reviews, security alert triage, and OCR pipelines.",
       status: "Active",
     },
     {
-      name: "Immich",
-      category: "Photos",
-      description: "Private self-hosted photo & video backup with on-prem ML indexing.",
+      name: "n8n Automation Backbone",
+      category: "Webhooks · Slack · Data Tables",
+      description:
+        "Event-driven automation hub powering this portfolio's Connect webhook → #portfolio-inbox Slack alerts, GitHub PR review cards, and Slack-to-Kaneo triage.",
       status: "Active",
     },
     {
-      name: "Jellyfin",
-      category: "Media",
-      description: "Home media server streaming across local devices.",
+      name: "Posta Email Infra",
+      category: "goposta · Custom SMTP",
+      description:
+        "Self-hosted transactional email delivery API backed by custom domain SMTP for automated notifications and outreach.",
+      status: "Active",
+    },
+    {
+      name: "Cal.com · Ghost · Umami",
+      category: "Scheduling · Blog · Analytics",
+      description:
+        "Self-hosted 15-min coffee scheduler, technical Ghost blog, cookie-free Umami analytics, plus Immich & Jellyfin across a multi-node homelab & VPS fleet.",
       status: "Active",
     },
   ] as SelfHostedItem[],
