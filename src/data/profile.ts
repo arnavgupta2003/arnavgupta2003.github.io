@@ -34,8 +34,8 @@ export const PROFILE = {
   email: "arnav.gupta.2003@gmail.com",
   // Replace these with your exact URLs before deploying
   socials: {
-    linkedin: "https://linkedin.com/in/arnavgupta-",
-    github: "https://github.com/arnavgupta",
+    linkedin: "https://www.linkedin.com/in/arnavgupta-/",
+    github: "https://github.com/arnavgupta2003",
     x: "https://x.com/arnavgupta",
   },
   // Live n8n webhook created via MCP (Handle portfolio contact submission)
