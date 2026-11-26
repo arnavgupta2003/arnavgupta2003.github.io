@@ -137,6 +137,19 @@ export const PROFILE = {
       ],
       tags: ["Distributed Infra", "Database Pipelines", "Fault Tolerance", "SRE"],
     },
+    {
+      company: "Networking & Security Lab, IIITD",
+      role: "Undergraduate Security Researcher",
+      period: "Jun 2023 – Jun 2025",
+      location: "New Delhi, India",
+      badge: "Research",
+      highlights: [
+        "Co-authored 'VPN or Vpwn? How Afraid Should You be of VPN Traffic Identification?' (IEEE TMA '25) under Dr. Sambuddho Chakravarty, evaluating ISP-scale detection across OpenVPN, WireGuard, IPSec/IKEv2, SSH, TLS, and commercial VPNs.",
+        "Demonstrated practical VPN evasion techniques (packet-size alteration, dummy traffic, TLS ClientHello SNI obfuscation) and proposed a scalable OpenVPN plaintext-hiding mechanism.",
+        "Investigated OS and hardware side-channel leakage on Android (system calls, Perfetto traces, Adreno GPU counters, CPU cache/branch patterns, eBPF) and built a CNN-GRU behavioral classifier achieving 97% accuracy (0.97 F1) across 32+ classes.",
+      ],
+      tags: ["Systems Security", "Network Privacy", "IEEE TMA '25", "Side-Channels", "eBPF"],
+    },
   ] as ExperienceItem[],
   research: [
     {
