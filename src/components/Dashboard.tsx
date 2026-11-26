@@ -37,7 +37,7 @@ function downloadVCard() {
     `FN:${PROFILE.name}`,
     `N:Gupta;Arnav;;;`,
     "ORG:Google (Core Search & AIM)",
-    "TITLE:Software Engineer & Fractional CTO",
+    "TITLE:Software Engineer",
     `EMAIL;TYPE=INTERNET:${PROFILE.email}`,
     `URL:${PROFILE.socials.linkedin}`,
     "NOTE:Met at NeurIPS / Personal Engineering Dashboard",
@@ -140,7 +140,7 @@ export default function Dashboard() {
           </div>
           <div className="min-w-0">
             <p className="truncate text-sm font-semibold text-zinc-100">{PROFILE.name}</p>
-            <p className="truncate text-xs text-zinc-400">SWE · CTO · Security</p>
+            <p className="truncate text-xs text-zinc-400">SWE · Systems · Security</p>
           </div>
         </div>
 
@@ -376,7 +376,7 @@ export default function Dashboard() {
               <div>
                 <h1 className="text-xl font-semibold text-zinc-50">Work Experience</h1>
                 <p className="mt-1 text-sm text-zinc-400">
-                  Large-scale AI search systems, startup CTO leadership, and cybersecurity consulting.
+                  Large-scale AI search systems, resilient backend infrastructure, and applied cybersecurity.
                 </p>
               </div>
               <div className="space-y-4">
@@ -657,7 +657,7 @@ export default function Dashboard() {
                   <div className="rounded-xl border border-zinc-800/90 bg-zinc-900/40 p-5">
                     <h2 className="text-sm font-semibold text-zinc-100">Coffee &amp; Deep-Dive Chats</h2>
                     <p className="mt-1.5 text-xs leading-relaxed text-zinc-400">
-                      Grab a quick slot during NeurIPS or online to talk AI systems, startups, or
+                      Grab a quick slot during NeurIPS or online to talk AI systems, engineering, or
                       security.
                     </p>
                     <div className="mt-4 flex flex-col gap-2">

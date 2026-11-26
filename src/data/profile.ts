@@ -27,10 +27,10 @@ export interface SelfHostedItem {
 export const PROFILE = {
   name: "Arnav Gupta",
   handle: "arnavgupta",
-  headline: "Software Engineer @ Google Search (Agentic Workflows) · Ex-CTO · Systems Security",
+  headline: "Software Engineer @ Google Search (Agentic Workflows) · Systems & Security",
   location: "Bangalore, India",
   statusBadge: "At NeurIPS — Open for 15-min coffee chats",
-  bio: "Software Engineer at Google working on Agentic Workflows for Google Search (Core Search & AIM Engineering), and former Fractional/Silent CTO focused on production AI systems, high-reliability infrastructure recovery (4-9s SLA), applied systems security, and self-hosted agentic infrastructure.",
+  bio: "Software Engineer at Google working on Agentic Workflows for Google Search (Core Search & AIM Engineering). Previously built high-reliability backend infrastructure (4-9s SLA), taught applied cybersecurity, and researched systems security at IIITD.",
   email: "arnav.gupta.2003@gmail.com",
   // Replace these with your exact URLs before deploying
   socials: {
@@ -57,12 +57,12 @@ export const PROFILE = {
     {
       label: "Infra Reliability",
       value: "4-9s SLA",
-      detail: "Deep architecture & pipeline recovery",
+      detail: "Resilient systems & 99.99% uptime",
     },
     {
       label: "Security Footprint",
       value: "800+ Trained",
-      detail: "Cyber consulting & IIT Guwahati CTFs",
+      detail: "Cybersecurity labs & IIT Guwahati CTFs",
     },
     {
       label: "Research Lab",
@@ -79,33 +79,39 @@ export const PROFILE = {
       badge: "Full-Time",
       highlights: [
         "Building and scaling agentic workflows and LLM-powered ranking features inside Google Search pipelines to drive algorithmic relevance at global scale.",
-        "Leading end-to-end full-stack feature development, technical optimizations, and scalable AI infrastructure.",
+        "Leading end-to-end full-stack feature development, latency and throughput optimizations, and scalable AI infrastructure.",
+        "Collaborating across Core Search and AIM engineering teams to ship production-grade evaluation, orchestration, and reliability guardrails.",
         "SWE Intern (May 2024 – Aug 2024): Improved local categorical rankings for mixed-language queries by closing classifier score gaps and integrating an NLP query classifier into the local web triggering pipeline.",
       ],
       tags: ["Agentic Workflows", "Google Search", "LLMs", "Ranking Systems", "AI Infra"],
     },
     {
       company: "Bizad",
-      role: "Silent Chief Technology Officer (CTO)",
+      role: "Chief Technology Officer (CTO)",
       period: "2023 – 2025",
       location: "Remote",
       badge: "Leadership",
       highlights: [
-        "Formulated stealth-mode product roadmaps, foundational architecture, and scalable infrastructure for rapid deployment and agile market delivery prior to joining Google.",
+        "Led end-to-end technical strategy, system architecture, and full-stack product engineering from zero-to-one prior to joining Google.",
+        "Architected scalable cloud infrastructure, containerized deployments, and automated CI/CD pipelines for rapid, reliable iteration.",
+        "Designed resilient backend services, APIs, and data models supporting multi-tenant workloads and low-latency user experiences.",
+        "Established engineering standards, security best practices, and observability tooling across the stack.",
       ],
-      tags: ["System Architecture", "Product Strategy", "Cloud Infra"],
+      tags: ["System Architecture", "Cloud Infra", "Full-Stack", "CI/CD"],
     },
     {
       company: "AccioJob",
-      role: "Lead Consultant – Cybersecurity",
-      period: "Apr 2024 – Dec 2025",
+      role: "Cybersecurity Instructor & Curriculum Engineer",
+      period: "Apr 2024 – Jun 2025",
       location: "New Delhi, India",
-      badge: "Advisory",
+      badge: "Education",
       highlights: [
-        "Directed security consulting operations, risk mitigation frameworks, and technical training across 800+ individuals.",
-        "Designed production-grade Capture The Flag (CTF) challenges and delivered elite cybersecurity courses for IIT Guwahati professors.",
+        "Designed hands-on cybersecurity curricula, risk mitigation labs, and technical training programs across 800+ learners.",
+        "Authored production-grade Capture The Flag (CTF) challenges covering web exploitation, network security, and binary/system hardening.",
+        "Delivered specialized applied cybersecurity workshops and course modules for IIT Guwahati faculty.",
+        "Mentored engineers on secure coding practices, threat modeling, and practical vulnerability assessment.",
       ],
-      tags: ["Cybersecurity", "CTF Design", "Risk Frameworks", "Training"],
+      tags: ["Cybersecurity", "CTF Design", "Curriculum", "Training"],
     },
     {
       company: "ScrapUncle",
@@ -114,10 +120,12 @@ export const PROFILE = {
       location: "New Delhi, India",
       badge: "Executive",
       highlights: [
-        "Re-engineered an unstable, bleeding-edge infrastructure stack to achieve resilient SLA stability.",
-        "Eliminated severe architectural and database pipeline bottlenecks causing raw data ingress loss, introducing fault-tolerant recovery loops.",
+        "Modernized core backend infrastructure and deployment workflows to achieve 4-9s (99.99%) SLA reliability.",
+        "Re-architected database and data-ingestion pipelines with fault-tolerant recovery loops, ensuring zero data loss and high throughput.",
+        "Introduced structured observability, automated alerting, and graceful degradation patterns across critical production services.",
+        "Aligned technical roadmap and engineering execution with operational growth, improving system maintainability and release velocity.",
       ],
-      tags: ["Infra Recovery", "Database Pipelines", "Fault Tolerance", "SRE"],
+      tags: ["Distributed Infra", "Database Pipelines", "Fault Tolerance", "SRE"],
     },
   ] as ExperienceItem[],
   research: [
