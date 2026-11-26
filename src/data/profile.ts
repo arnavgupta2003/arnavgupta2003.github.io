@@ -39,7 +39,7 @@ export const PROFILE = {
   location: "Bangalore, India",
   lastUpdated: "Nov 27, 2026",
   statusBadge: "At NeurIPS — Open for 15-min coffee chats",
-  qrUrl: "https://arnavgupta2003.github.io/?utm_source=qr&utm_medium=scan&utm_campaign=portfolio",
+  qrUrl: "https://arnavgupta2003.github.io/?utm_source=qr",
   bio: "Software Engineer at Google working on Agentic Workflows for Google Search (Core Search & AIM Engineering). Previously built high-reliability backend infrastructure (4-9s SLA), taught applied cybersecurity, and researched systems security at IIITD.",
   email: "arnav.gupta.2003@gmail.com",
   // Replace these with your exact URLs before deploying
