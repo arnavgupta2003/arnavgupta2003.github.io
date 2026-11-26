@@ -25,19 +25,28 @@ export interface SelfHostedItem {
   status: "Active" | "Planned";
 }
 
+export interface FeaturedReadItem {
+  title: string;
+  category: string;
+  summary: string;
+  url: string;
+}
+
 export const PROFILE = {
   name: "Arnav Gupta",
   handle: "arnavgupta",
   headline: "Software Engineer @ Google Search (Agentic Workflows) · Systems & Security",
   location: "Bangalore, India",
+  lastUpdated: "Nov 27, 2026",
   statusBadge: "At NeurIPS — Open for 15-min coffee chats",
+  qrUrl: "https://arnavgupta2003.github.io/?utm_source=qr&utm_medium=scan&utm_campaign=portfolio",
   bio: "Software Engineer at Google working on Agentic Workflows for Google Search (Core Search & AIM Engineering). Previously built high-reliability backend infrastructure (4-9s SLA), taught applied cybersecurity, and researched systems security at IIITD.",
   email: "arnav.gupta.2003@gmail.com",
   // Replace these with your exact URLs before deploying
   socials: {
     linkedin: "https://www.linkedin.com/in/arnavgupta-/",
     github: "https://github.com/arnavgupta2003",
-    x: "https://x.com/arnavgupta",
+    x: "https://x.com/arnavgupta5",
   },
   // Live n8n webhook created via MCP (Handle portfolio contact submission)
   contactWebhookUrl: "https://n8n.bizad.in/webhook/portfolio-contact",
@@ -199,6 +208,13 @@ export const PROFILE = {
   },
   selfHosted: [
     {
+      name: "Private LLM Cloud",
+      category: "Tailscale · xyOps · Ollama · n8n",
+      description:
+        "Distributed Ollama inference pool clustered across bare-metal nodes over Tailscale, health-monitored by xyOps (xySat) and exposed via an OpenAI-compatible n8n gateway with zero public ports.",
+      status: "Active",
+    },
+    {
       name: "Self-Maintaining LLM Wiki",
       category: "Obsidian · MCP · Git · Kaneo",
       description:
@@ -213,32 +229,56 @@ export const PROFILE = {
       status: "Active",
     },
     {
-      name: "xyOps + Paperclip GPU Queue",
-      category: "xyOps · Ollama · Local GPU",
+      name: "Split-Horizon Proxy & Mesh",
+      category: "Nginx Proxy Manager · Tailscale · Uptime Kuma",
       description:
-        "Concurrency-controlled local GPU job scheduler & AI control plane powering shared Ollama inference for CI diff reviews, security alert triage, and OCR pipelines.",
+        "Dual public and internal Nginx Proxy Manager ingress paired with Tailscale mesh VPN, Uptime Kuma alerting, NetAlertX device monitoring, Portainer, and Cockpit.",
+      status: "Active",
+    },
+    {
+      name: "Private S3, Backups & Docs",
+      category: "MinIO S3 · Duplicati · Syncthing · Paperless-ngx",
+      description:
+        "Self-hosted MinIO S3-compatible object storage, encrypted Duplicati scheduled backups, Syncthing multi-device sync, and Paperless-ngx OCR document archive.",
       status: "Active",
     },
     {
       name: "n8n Automation Backbone",
-      category: "Webhooks · Slack · Data Tables",
+      category: "Webhooks · Slack · WAHA · Posta",
       description:
-        "Event-driven automation hub powering this portfolio's Connect webhook → #portfolio-inbox Slack alerts, GitHub PR review cards, and Slack-to-Kaneo triage.",
+        "Event-driven automation hub powering this portfolio's Connect webhook → #portfolio-inbox Slack alerts, WhatsApp HTTP API (WAHA), and Posta custom SMTP delivery.",
       status: "Active",
     },
     {
-      name: "Posta Email Infra",
-      category: "goposta · Custom SMTP",
+      name: "Vision, Media & Photos",
+      category: "Frigate NVR · Immich · Jellyfin",
       description:
-        "Self-hosted transactional email delivery API backed by custom domain SMTP for automated notifications and outreach.",
+        "Self-hosted Frigate NVR camera pipeline, automated mobile photo/video backup via Immich, and Jellyfin media streaming across the home cluster.",
       status: "Active",
     },
     {
-      name: "Cal.com · Ghost · Umami",
-      category: "Scheduling · Blog · Analytics",
+      name: "Cal.com · ARSphere · Umami",
+      category: "Scheduling · Ghost · Analytics",
       description:
-        "Self-hosted 15-min coffee scheduler, technical Ghost blog, cookie-free Umami analytics, plus Immich & Jellyfin across a multi-node homelab & VPS fleet.",
+        "Self-hosted 15-min/30-min Cal.com scheduler, Ghost engineering blog (blog.kontour.in), and cookie-free Umami analytics across a multi-node homelab & VPS fleet.",
       status: "Active",
     },
   ] as SelfHostedItem[],
+  featuredReads: [
+    {
+      title: "Building a Private LLM Cloud: Distributed Ollama Orchestration with Tailscale, xyOps, and n8n",
+      category: "Infrastructure Design",
+      summary:
+        "Clustering mismatched bare-metal servers over Tailscale into a self-healing, OpenAI-compatible LLM pool using xyOps health monitoring and an n8n streaming gateway.",
+      url: "https://blog.kontour.in/building-a-private-llm-cloud-distributed-ollama-orchestration-with-tailscale-xyops-and-n8n/?utm_source=arnavgupta2003.github.io&utm_medium=portfolio&utm_campaign=selfhosted",
+    },
+    {
+      title: "When Monitoring Lies: A Case Study in the Observer Effect",
+      category: "Interesting Studies",
+      summary:
+        "Debugging frozen Prometheus & Grafana CPU metrics across Nginx Proxy Manager vs. Cloudflare Zero Trust Tunnel—tracing cf-cache-status: HIT on /metrics and fixing it with Cache-Control: no-store.",
+      url: "https://blog.kontour.in/when-monitoring-lies-a-case-study-in-the-observer-effect/?utm_source=arnavgupta2003.github.io&utm_medium=portfolio&utm_campaign=selfhosted",
+    },
+  ] as FeaturedReadItem[],
+  blogUrl: "https://blog.kontour.in/?utm_source=arnavgupta2003.github.io&utm_medium=portfolio&utm_campaign=selfhosted",
 };

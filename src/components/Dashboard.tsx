@@ -17,7 +17,10 @@ import {
   Send,
   GraduationCap,
   MapPin,
+  BookOpen,
+  QrCode,
 } from "lucide-react";
+import { QRCodeSVG } from "qrcode.react";
 import { PROFILE } from "@/data/profile";
 
 type TabId = "overview" | "experience" | "research" | "selfhosted" | "connect";
@@ -59,6 +62,7 @@ export default function Dashboard() {
   const [activeTab, setActiveTab] = useState<TabId>("overview");
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const [copiedEmail, setCopiedEmail] = useState(false);
+  const [copiedQr, setCopiedQr] = useState(false);
 
   // Contact form state
   const [name, setName] = useState("");
@@ -87,6 +91,16 @@ export default function Dashboard() {
       setTimeout(() => setCopiedEmail(false), 2000);
     } catch {
       window.location.href = `mailto:${PROFILE.email}`;
+    }
+  }
+
+  async function handleCopyQrLink() {
+    try {
+      await navigator.clipboard.writeText(PROFILE.qrUrl);
+      setCopiedQr(true);
+      setTimeout(() => setCopiedQr(false), 2000);
+    } catch {
+      // ignore clipboard errors
     }
   }
 
@@ -239,9 +253,15 @@ export default function Dashboard() {
               <span className="h-2 w-2 rounded-full bg-emerald-400" />
               <span className="font-medium text-zinc-200">{PROFILE.statusBadge}</span>
             </div>
-            <div className="flex items-center gap-2 text-xs text-zinc-400">
-              <MapPin className="h-3.5 w-3.5" />
-              <span>{PROFILE.location}</span>
+            <div className="flex items-center gap-3 text-xs text-zinc-400">
+              <span className="font-mono-code text-[11px] text-zinc-500">
+                Updated {PROFILE.lastUpdated}
+              </span>
+              <span className="text-zinc-700">·</span>
+              <div className="flex items-center gap-1.5">
+                <MapPin className="h-3.5 w-3.5" />
+                <span>{PROFILE.location}</span>
+              </div>
             </div>
           </div>
 
@@ -514,12 +534,12 @@ export default function Dashboard() {
 
           {/* SELF-HOSTED TAB */}
           {activeTab === "selfhosted" && (
-            <div className="space-y-4">
+            <div className="space-y-6">
               <div>
                 <h1 className="text-xl font-semibold text-zinc-50">Self-Hosted Stack</h1>
                 <p className="mt-1 text-sm text-zinc-400">
-                  Services I run on my own infrastructure — including the n8n workflow behind this
-                  site&apos;s Connect form.
+                  Services I run across my homelab and VPS fleet — including the n8n workflow behind
+                  this site&apos;s Connect form.
                 </p>
               </div>
               <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -552,6 +572,53 @@ export default function Dashboard() {
                   </div>
                 ))}
               </div>
+
+              {/* Featured Reads from ARSphere (blog.kontour.in) */}
+              <section className="space-y-3 pt-2">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <div className="flex items-center gap-2">
+                    <BookOpen className="h-4 w-4 text-zinc-400" />
+                    <h2 className="text-base font-semibold text-zinc-100">
+                      Featured Reads on ARSphere
+                    </h2>
+                  </div>
+                  <a
+                    href={PROFILE.blogUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-xs text-zinc-400 transition-colors hover:text-zinc-200"
+                  >
+                    <span>blog.kontour.in</span>
+                    <ArrowUpRight className="h-3.5 w-3.5" />
+                  </a>
+                </div>
+                <div className="grid grid-cols-1 gap-3 lg:grid-cols-2">
+                  {PROFILE.featuredReads.map((post) => (
+                    <a
+                      key={post.url}
+                      href={post.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex flex-col justify-between rounded-xl border border-zinc-800/90 bg-zinc-900/40 p-5 transition-colors hover:border-zinc-700 hover:bg-zinc-900/70"
+                    >
+                      <div>
+                        <div className="flex items-center justify-between gap-2">
+                          <span className="rounded border border-zinc-800 bg-zinc-950 px-2 py-0.5 font-mono-code text-[10px] text-zinc-400">
+                            {post.category}
+                          </span>
+                          <ArrowUpRight className="h-4 w-4 shrink-0 text-zinc-500 transition-colors group-hover:text-zinc-200" />
+                        </div>
+                        <h3 className="mt-2.5 text-sm font-semibold leading-snug text-zinc-100 group-hover:text-white">
+                          {post.title}
+                        </h3>
+                        <p className="mt-2 text-xs leading-relaxed text-zinc-400">
+                          {post.summary}
+                        </p>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </section>
             </div>
           )}
 
@@ -748,6 +815,38 @@ export default function Dashboard() {
                         <span>X (Twitter)</span>
                         <ArrowUpRight className="h-3.5 w-3.5 text-zinc-400" />
                       </a>
+                    </div>
+                  </div>
+
+                  {/* QR Code Card */}
+                  <div className="rounded-xl border border-zinc-800/90 bg-zinc-900/40 p-5">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <QrCode className="h-4 w-4 text-zinc-400" />
+                        <h2 className="text-sm font-semibold text-zinc-100">Share Portfolio</h2>
+                      </div>
+                      <span className="font-mono-code text-[10px] text-zinc-500">utm_source=qr</span>
+                    </div>
+                    <div className="mt-3 flex items-center gap-4">
+                      <div className="shrink-0 rounded-lg bg-white p-2">
+                        <QRCodeSVG value={PROFILE.qrUrl} size={96} level="M" />
+                      </div>
+                      <div className="min-w-0 space-y-2">
+                        <p className="text-xs leading-relaxed text-zinc-400">
+                          Scan to open this dashboard on mobile with QR attribution.
+                        </p>
+                        <button
+                          onClick={handleCopyQrLink}
+                          className="inline-flex items-center gap-1.5 rounded-md border border-zinc-800 bg-zinc-950 px-2.5 py-1.5 text-xs text-zinc-200 hover:border-zinc-700"
+                        >
+                          {copiedQr ? (
+                            <Check className="h-3.5 w-3.5 text-emerald-400" />
+                          ) : (
+                            <Copy className="h-3.5 w-3.5 text-zinc-400" />
+                          )}
+                          <span>{copiedQr ? "Link Copied" : "Copy QR URL"}</span>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
