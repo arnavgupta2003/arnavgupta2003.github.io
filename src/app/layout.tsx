@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
+import { PostHogProvider } from "@/components/PostHogProvider";
 import { PROFILE } from "@/data/profile";
 import "./globals.css";
 
@@ -29,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable} dark`}>
       <body className="min-h-screen bg-[#09090b] text-zinc-100 antialiased selection:bg-zinc-700 selection:text-white">
-        {children}
+        <PostHogProvider>{children}</PostHogProvider>
         {PROFILE.umami.scriptUrl && PROFILE.umami.websiteId ? (
           <Script
             src={PROFILE.umami.scriptUrl}

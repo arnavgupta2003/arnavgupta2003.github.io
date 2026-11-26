@@ -58,6 +58,11 @@ export const PROFILE = {
     scriptUrl: "",
     websiteId: "",
   },
+  // PostHog analytics (set NEXT_PUBLIC_POSTHOG_KEY in GitHub repo variables or .env.local)
+  posthog: {
+    key: process.env.NEXT_PUBLIC_POSTHOG_KEY || "",
+    host: process.env.NEXT_PUBLIC_POSTHOG_HOST || "https://us.i.posthog.com",
+  },
   kpis: [
     {
       label: "Current Role",

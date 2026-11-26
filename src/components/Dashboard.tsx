@@ -21,6 +21,7 @@ import {
   QrCode,
 } from "lucide-react";
 import { QRCodeSVG } from "qrcode.react";
+import posthog from "posthog-js";
 import { PROFILE } from "@/data/profile";
 
 type TabId = "overview" | "experience" | "research" | "selfhosted" | "connect";
@@ -33,7 +34,14 @@ const NAV_ITEMS: { id: TabId; label: string; icon: React.ComponentType<{ classNa
   { id: "connect", label: "Connect", icon: Mail },
 ];
 
+function trackEvent(event: string, properties?: Record<string, unknown>) {
+  if (posthog.__loaded) {
+    posthog.capture(event, properties);
+  }
+}
+
 function downloadVCard() {
+  trackEvent("vcard_downloaded");
   const vcard = [
     "BEGIN:VCARD",
     "VERSION:3.0",
@@ -79,6 +87,7 @@ export default function Dashboard() {
   function selectTab(tab: TabId) {
     setActiveTab(tab);
     setMobileNavOpen(false);
+    trackEvent("tab_viewed", { tab });
     if (typeof window !== "undefined") {
       window.scrollTo({ top: 0, behavior: "instant" });
     }
@@ -98,6 +107,7 @@ export default function Dashboard() {
     try {
       await navigator.clipboard.writeText(PROFILE.qrUrl);
       setCopiedQr(true);
+      trackEvent("qr_link_copied");
       setTimeout(() => setCopiedQr(false), 2000);
     } catch {
       // ignore clipboard errors
@@ -132,6 +142,7 @@ export default function Dashboard() {
         type: "success",
         text: data.message || "Sent! Arnav got your ping on Slack and will reply soon.",
       });
+      trackEvent("contact_submitted", { metAtNeurips });
       setName("");
       setEmail("");
       setMessage("");

@@ -35,6 +35,8 @@ jobs:
           # Leave empty for custom domain or username.github.io repo.
           # For username.github.io/repo-name, set NEXT_PUBLIC_BASE_PATH: /repo-name
           NEXT_PUBLIC_BASE_PATH: ""
+          NEXT_PUBLIC_POSTHOG_KEY: ${{ vars.NEXT_PUBLIC_POSTHOG_KEY }}
+          NEXT_PUBLIC_POSTHOG_HOST: ${{ vars.NEXT_PUBLIC_POSTHOG_HOST }}
         run: npm run build
 
       - name: Upload artifact
