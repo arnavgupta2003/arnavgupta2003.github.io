@@ -29,6 +29,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable} dark`}>
+      <head>
+        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Navigation Guide" />
+      </head>
       <body className="min-h-screen bg-[#09090b] text-zinc-100 antialiased selection:bg-zinc-700 selection:text-white">
         <PostHogProvider>{children}</PostHogProvider>
         {PROFILE.umami.scriptUrl && PROFILE.umami.websiteId ? (

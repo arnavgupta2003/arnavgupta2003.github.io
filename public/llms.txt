@@ -1,0 +1,51 @@
+# Arnav Gupta — Engineering Dashboard
+
+> Personal engineering portfolio for Arnav Gupta, Software Engineer at Google Search (Agentic Workflows, Core Search & AIM Engineering), based in Bangalore, India. Covers work history, systems & network security research, self-hosted homelab/VPS infrastructure, and contact/scheduling links.
+
+## Navigation Instructions for LLMs & Agents
+
+This site is a single-page Next.js static dashboard (`https://arnavgupta2003.github.io/`) organized into five interactive tabs. You can link users directly to any section using `?tab=<name>`:
+
+- **Overview**: `https://arnavgupta2003.github.io/?tab=overview` — Headline, bio, key metrics, recent roles summary, and self-hosted stack summary.
+- **Experience**: `https://arnavgupta2003.github.io/?tab=experience` — Detailed work history across Google, Bizad, AccioJob, ScrapUncle, and IIITD.
+- **Research & Security**: `https://arnavgupta2003.github.io/?tab=research` — Published IEEE TMA '25 paper, EALS framework, Android side-channel BTP, GPU-Based Firewall, and IIITD education.
+- **Self-Hosted**: `https://arnavgupta2003.github.io/?tab=selfhosted` — Homelab (`ARCUBE`) and Dokploy VPS (`qubit`) infrastructure plus featured reads from ARSphere (`blog.kontour.in`).
+- **Connect**: `https://arnavgupta2003.github.io/?tab=connect` — Contact form (n8n -> Slack), Cal.com 15-min/30-min scheduling, vCard download, social links, and QR code.
+
+## Profile Summary
+
+- **Name**: Arnav Gupta
+- **Role**: Software Engineer @ Google Search (Agentic Workflows)
+- **Location**: Bangalore, India
+- **Education**: B.Tech in Computer Science and Applied Mathematics (CSAM), IIIT Delhi (2021–2025, CGPA 8.13)
+- **Email**: arnav.gupta.2003@gmail.com
+- **GitHub**: https://github.com/arnavgupta2003
+- **LinkedIn**: https://www.linkedin.com/in/arnavgupta-/
+- **X (Twitter)**: https://x.com/arnavgupta5
+- **Blog (ARSphere)**: https://blog.kontour.in/
+
+## Work Experience
+
+- **Google** — Software Engineer (SWE) – Agentic Workflows for Google Search (Core Search & AIM) | `2025 – Present` | Bangalore, India (Also SWE Intern, May 2024 – Aug 2024)
+- **Bizad** — Chief Technology Officer (CTO) | `2023 – 2025` | Remote
+- **AccioJob** — Cybersecurity Instructor & Curriculum Engineer | `Apr 2024 – Jun 2025` | New Delhi, India (800+ learners, CTFs, IIT Guwahati faculty workshops)
+- **ScrapUncle** — Chief Technology Officer (CTO) | `Mar 2024 – Dec 2024` | New Delhi, India (4-9s / 99.99% SLA reliability, fault-tolerant pipelines)
+- **Networks and System Security Lab, IIITD** — Undergraduate Student Researcher | `May 2023 – Jun 2025` | New Delhi, India
+
+## Research & Publications
+
+- **VPN or Vpwn? How Afraid Should You be of VPN Traffic Identification?** (IEEE TMA '25): https://ieeexplore.ieee.org/abstract/document/11096969/
+- **The EALS Framework: Multi-Objective Leader Election in Robotic Teams** (Paper PDF): https://github.com/arnavgupta2003/arnavgupta2003/blob/main/EALS__IEEE_Release-5.pdf
+- **Android Side-Channel Analysis & Behavioral Classification** (BTP Report PDF, 97%+ CNN-GRU accuracy across 32+ classes): https://github.com/arnavgupta2003/arnavgupta2003/blob/main/BTP%20Report%20Android%20Side%20Channel%20Attacks_Term1.pdf
+- **GPU-Based High-Throughput Firewall** (CUDA): https://github.com/arnavgupta2003/GPU-Based-Firewall
+
+## Featured Technical Writing (ARSphere)
+
+- **Building a Private LLM Cloud: Distributed Ollama Orchestration with Tailscale, xyOps, and n8n**: https://blog.kontour.in/building-a-private-llm-cloud-distributed-ollama-orchestration-with-tailscale-xyops-and-n8n/
+- **When Monitoring Lies: A Case Study in the Observer Effect**: https://blog.kontour.in/when-monitoring-lies-a-case-study-in-the-observer-effect/
+
+## Scheduling & Contact
+
+- **15-min Coffee Chat**: https://cal.qubit.bizad.in/arnav/15min
+- **30-min Deep Dive**: https://cal.qubit.bizad.in/arnav/30min
+- **Direct Message Form**: https://arnavgupta2003.github.io/?tab=connect

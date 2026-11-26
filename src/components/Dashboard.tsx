@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   LayoutDashboard,
   Briefcase,
@@ -72,6 +72,23 @@ export default function Dashboard() {
   const [copiedEmail, setCopiedEmail] = useState(false);
   const [copiedQr, setCopiedQr] = useState(false);
 
+  // Sync initial tab from ?tab= or #hash for deep links (including llms.txt)
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const validTabs: TabId[] = ["overview", "experience", "research", "selfhosted", "connect"];
+    const params = new URLSearchParams(window.location.search);
+    const paramTab = params.get("tab") as TabId | null;
+    const hashTab = window.location.hash.replace("#", "") as TabId;
+    const target = paramTab && validTabs.includes(paramTab)
+      ? paramTab
+      : validTabs.includes(hashTab)
+      ? hashTab
+      : null;
+    if (target) {
+      setActiveTab(target);
+    }
+  }, []);
+
   // Contact form state
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -89,6 +106,13 @@ export default function Dashboard() {
     setMobileNavOpen(false);
     trackEvent("tab_viewed", { tab });
     if (typeof window !== "undefined") {
+      const url = new URL(window.location.href);
+      if (tab === "overview") {
+        url.searchParams.delete("tab");
+      } else {
+        url.searchParams.set("tab", tab);
+      }
+      window.history.replaceState({}, "", url.toString());
       window.scrollTo({ top: 0, behavior: "instant" });
     }
   }
