@@ -257,10 +257,10 @@ export const PROFILE = {
       status: "Active",
     },
     {
-      name: "Vision, Media & Photos",
-      category: "Frigate NVR · Immich · Jellyfin",
+      name: "Media, Vision & *arr Stack",
+      category: "Jellyfin · Immich · Frigate · *arr",
       description:
-        "Self-hosted Frigate NVR camera pipeline, automated mobile photo/video backup via Immich, and Jellyfin media streaming across the home cluster.",
+        "Automated media pipeline spanning Prowlarr indexing on VPS to Jellyseerr, Radarr, Sonarr, Bazarr, qBittorrent, and Jellyfin at home—alongside Immich photo backups and Frigate NVR.",
       status: "Active",
     },
     {
