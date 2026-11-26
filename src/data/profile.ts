@@ -131,14 +131,25 @@ export const PROFILE = {
   ] as ExperienceItem[],
   research: [
     {
+      title: "VPN or Vpwn? How Afraid Should You be of VPN Traffic Identification?",
+      org: "IEEE TMA '25 · Networking & Security Lab, IIITD",
+      period: "Jun 2023 – Jun 2025",
+      advisor: "Dr. Sambuddho Chakravarty",
+      summary:
+        "Published at the 9th Network Traffic Measurement and Analysis Conference (TMA 2025). Analyzed ISP-scale VPN traffic identification across OpenVPN, WireGuard, IPSec/IKEv2, SSH, TLS, and seven commercial/open-source VPNs. Demonstrated evasion techniques (packet-size alteration, dummy traffic, TLS ClientHello SNI obfuscation) and proposed a scalable OpenVPN plaintext-hiding mechanism.",
+      tags: ["IEEE TMA '25", "Network Security", "VPN Protocols", "Traffic Analysis", "Privacy"],
+      links: [
+        { label: "IEEE Xplore", url: "https://ieeexplore.ieee.org/abstract/document/11096969/" },
+      ],
+    },
+    {
       title: "The EALS Framework: Multi-Objective Leader Election in Robotic Teams",
-      org: "IEEE Publication · IIITD",
+      org: "IIIT Delhi",
       period: "2024 – 2025",
       summary:
         "Designed EALS (Energy-Aware Leadership Selection), a modular multi-objective leader election framework with Proximity, Taskload, Comms, and Reliability variants and Pareto-optimal tie-breaking. Validated via Z3 SMT formal verification, Python simulation, and decentralized ROS2 deployment—reducing leader churn by up to 87%.",
-      tags: ["IEEE Paper", "Distributed Systems", "Z3 SMT", "ROS2", "Multi-Robot"],
+      tags: ["Distributed Systems", "Z3 SMT", "ROS2", "Multi-Robot", "Optimization"],
       links: [
-        { label: "IEEE Xplore", url: "https://ieeexplore.ieee.org/abstract/document/11096969/" },
         {
           label: "Paper PDF",
           url: "https://github.com/arnavgupta2003/arnavgupta2003/blob/main/EALS__IEEE_Release-5.pdf",
@@ -170,15 +181,6 @@ export const PROFILE = {
       links: [
         { label: "GitHub Repo", url: "https://github.com/arnavgupta2003/GPU-Based-Firewall" },
       ],
-    },
-    {
-      title: "VPN Traffic Identification & ISP-Adversary Evasion",
-      org: "Networking & Security Lab, IIITD",
-      period: "Jun 2023 – 2025",
-      advisor: "Dr. Sambuddho Chakravarty",
-      summary:
-        "Evaluated VPN protocol fingerprinting under ISP-level adversary models and engineered privacy-preserving evasion techniques using packet-size manipulation, SNI handling, and MTU tuning.",
-      tags: ["Network Security", "VPN Protocols", "Traffic Analysis", "Privacy"],
     },
   ] as ResearchItem[],
   education: {
