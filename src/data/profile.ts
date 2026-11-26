@@ -229,24 +229,31 @@ export const PROFILE = {
       status: "Active",
     },
     {
-      name: "Split-Horizon Proxy & Mesh",
-      category: "Nginx Proxy Manager · Tailscale · Uptime Kuma",
+      name: "Dokploy PaaS & Edge Routing",
+      category: "Dokploy · Traefik v3 · Cloudflared · Tailscale",
       description:
-        "Dual public and internal Nginx Proxy Manager ingress paired with Tailscale mesh VPN, Uptime Kuma alerting, NetAlertX device monitoring, Portainer, and Cockpit.",
+        "Self-hosted VPS PaaS running containerized workloads and preview deployments behind Traefik v3, Cloudflare Zero Trust tunnels, and a Tailscale exit node.",
       status: "Active",
     },
     {
-      name: "Private S3, Backups & Docs",
-      category: "MinIO S3 · Duplicati · Syncthing · Paperless-ngx",
+      name: "Distributed S3, Backups & Docs",
+      category: "Garage S3 · MinIO · Duplicati · Paperless-ngx",
       description:
-        "Self-hosted MinIO S3-compatible object storage, encrypted Duplicati scheduled backups, Syncthing multi-device sync, and Paperless-ngx OCR document archive.",
+        "Garage S3 object storage on VPS paired with MinIO at home, encrypted Duplicati scheduled backups, Syncthing multi-device sync, and Paperless-ngx OCR archive.",
       status: "Active",
     },
     {
-      name: "n8n Automation Backbone",
-      category: "Webhooks · Slack · WAHA · Posta",
+      name: "n8n · Posta · Kaneo Backbone",
+      category: "n8n · Posta SMTP · Kaneo · WAHA",
       description:
-        "Event-driven automation hub powering this portfolio's Connect webhook → #portfolio-inbox Slack alerts, WhatsApp HTTP API (WAHA), and Posta custom SMTP delivery.",
+        "Event-driven automation hub powering this portfolio's Connect webhook → #portfolio-inbox Slack alerts, Posta transactional email delivery, WAHA, and Kanban triage.",
+      status: "Active",
+    },
+    {
+      name: "Split-Horizon Proxy & Monitoring",
+      category: "Nginx Proxy Manager · Uptime Kuma · NetAlertX",
+      description:
+        "Dual public and internal Nginx Proxy Manager ingress paired with Uptime Kuma alerting, NetAlertX network auditing, Portainer, and Cockpit.",
       status: "Active",
     },
     {
