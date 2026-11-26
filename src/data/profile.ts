@@ -15,6 +15,7 @@ export interface ResearchItem {
   advisor?: string;
   summary: string;
   tags: string[];
+  links?: { label: string; url: string }[];
 }
 
 export interface SelfHostedItem {
@@ -130,13 +131,45 @@ export const PROFILE = {
   ] as ExperienceItem[],
   research: [
     {
-      title: "Android Side-Channel Malware & Input Reconstruction",
+      title: "The EALS Framework: Multi-Objective Leader Election in Robotic Teams",
+      org: "IEEE Publication · IIITD",
+      period: "2024 – 2025",
+      summary:
+        "Designed EALS (Energy-Aware Leadership Selection), a modular multi-objective leader election framework with Proximity, Taskload, Comms, and Reliability variants and Pareto-optimal tie-breaking. Validated via Z3 SMT formal verification, Python simulation, and decentralized ROS2 deployment—reducing leader churn by up to 87%.",
+      tags: ["IEEE Paper", "Distributed Systems", "Z3 SMT", "ROS2", "Multi-Robot"],
+      links: [
+        { label: "IEEE Xplore", url: "https://ieeexplore.ieee.org/abstract/document/11096969/" },
+        {
+          label: "Paper PDF",
+          url: "https://github.com/arnavgupta2003/arnavgupta2003/blob/main/EALS__IEEE_Release-5.pdf",
+        },
+      ],
+    },
+    {
+      title: "Android Side-Channel Analysis & Behavioral Classification",
       org: "Networking & Security Lab, IIITD",
-      period: "Jun 2023 – 2025",
+      period: "Jun 2023 – May 2024",
       advisor: "Dr. Sambuddho Chakravarty",
       summary:
-        "Investigated kernel-level side-channel vulnerabilities for end-to-end data extraction, fingerprinted kernel behavior, and applied ML models for high-precision keyboard snooping and input reconstruction.",
-      tags: ["Android Internals", "Side-Channels", "Applied ML", "Systems Security"],
+        "Investigated OS and hardware side-channel leakage on Android across system calls, Perfetto traces, Adreno GPU performance counters, CPU cache/branch patterns, and eBPF kernel tracing. Built a CNN-GRU behavioral classifier achieving 97% accuracy (0.97 F1) across 32+ classes to inform proactive mobile defenses.",
+      tags: ["Android Internals", "Side-Channels", "eBPF", "CNN-GRU", "Systems Security"],
+      links: [
+        {
+          label: "BTP Report PDF",
+          url: "https://github.com/arnavgupta2003/arnavgupta2003/blob/main/BTP%20Report%20Android%20Side%20Channel%20Attacks_Term1.pdf",
+        },
+      ],
+    },
+    {
+      title: "GPU-Based High-Throughput Firewall",
+      org: "Systems & Network Security, IIITD",
+      period: "2023",
+      summary:
+        "Engineered a CUDA-accelerated packet-filtering firewall offloading rule-matching and hash-based packet inspection onto GPU threads for high-throughput, parallel network traffic filtering.",
+      tags: ["CUDA", "GPU Computing", "Network Security", "Packet Filtering"],
+      links: [
+        { label: "GitHub Repo", url: "https://github.com/arnavgupta2003/GPU-Based-Firewall" },
+      ],
     },
     {
       title: "VPN Traffic Identification & ISP-Adversary Evasion",
@@ -144,7 +177,7 @@ export const PROFILE = {
       period: "Jun 2023 – 2025",
       advisor: "Dr. Sambuddho Chakravarty",
       summary:
-        "Evaluated VPN protocol fingerprinting under ISP-level adversary models and engineered novel evasion techniques using packet-size manipulation, SNI poisoning, and MTU tuning.",
+        "Evaluated VPN protocol fingerprinting under ISP-level adversary models and engineered privacy-preserving evasion techniques using packet-size manipulation, SNI handling, and MTU tuning.",
       tags: ["Network Security", "VPN Protocols", "Traffic Analysis", "Privacy"],
     },
   ] as ResearchItem[],

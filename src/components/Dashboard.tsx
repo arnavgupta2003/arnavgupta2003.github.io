@@ -449,6 +449,22 @@ export default function Dashboard() {
                       {item.advisor ? ` · Advisor: ${item.advisor}` : ""}
                     </p>
                     <p className="mt-3 text-sm leading-relaxed text-zinc-300">{item.summary}</p>
+                    {item.links && item.links.length > 0 && (
+                      <div className="mt-3.5 flex flex-wrap gap-2">
+                        {item.links.map((link) => (
+                          <a
+                            key={link.url}
+                            href={link.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 rounded-md border border-zinc-700/80 bg-zinc-950 px-2.5 py-1 text-xs font-medium text-zinc-200 transition-colors hover:border-zinc-600 hover:bg-zinc-800"
+                          >
+                            <span>{link.label}</span>
+                            <ArrowUpRight className="h-3 w-3 text-zinc-400" />
+                          </a>
+                        ))}
+                      </div>
+                    )}
                     <div className="mt-4 flex flex-wrap gap-1.5">
                       {item.tags.map((tag) => (
                         <span
